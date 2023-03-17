@@ -1,18 +1,17 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  WaterAndBiscuit
 //
-//  Created by Oh!ara on 2023/03/17.
+//  Created by Oh!ara on 2023/03/18.
 //
 
 import SwiftUI
-import RealityKit
 
-struct ContentView : View {
+
+
+struct HomeView : View {
     
-//    init() {
-//        UITextView.appearance().backgroundColor = .clear
-//    }
+
     
     
     @State var name = ""
@@ -209,12 +208,8 @@ struct ContentView : View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
-
-
-
-
