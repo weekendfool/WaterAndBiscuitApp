@@ -9,6 +9,7 @@ import SwiftUI
 
 
 
+
 struct HomeView : View {
     
 
@@ -19,7 +20,37 @@ struct HomeView : View {
     @State var name = ""
     @State var point = 1000
     @State var team = ""
-    @State var date = Date()
+    @State var time = ""
+    
+    let month = 8
+    let settingDate = 29
+    let date = Int.random(in: 1...31)
+    
+//    func timer() {
+//        let timer = Timer(
+//            timeInterval: 1,
+//            target: self,
+//            selector: #selector(timeCheck),
+//            userInfo: nil,
+//            repeats: true)
+//    }
+//
+    func timeCheck() {
+        let dt = Date()
+        var dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = DateFormatter.dateFormat(
+            fromTemplate: "HHmmss",
+            options: 0,
+            locale: Locale(identifier: "ja_JP")
+        )
+        
+        time = dateFormatter.string(from: dt)
+    }
+    
+    
+
+    
     var body: some View {
         
         
@@ -33,7 +64,7 @@ struct HomeView : View {
                     print("userName")
                 } label: {
                     VStack(spacing: 0) {
-                        Text("\(date)")
+                        Text("\(time)")
                             .font(.system(size: 25))
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -83,7 +114,7 @@ struct HomeView : View {
                     .frame(width: 80, height: 80)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                     .cornerRadius(10)
-                    .offset(x: -20)
+                    .offset(x: -15)
                     
                     Spacer()
                     
@@ -121,7 +152,7 @@ struct HomeView : View {
                     .frame(width: 80, height: 80)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                     .cornerRadius(10)
-                    .offset(x: 20)
+                    .offset(x: 15)
                     
                     Spacer()
                     
@@ -149,7 +180,7 @@ struct HomeView : View {
                     .frame(width: 80, height: 80)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                     .cornerRadius(10)
-                    .offset(x: -20)
+                    .offset(x: -15)
                     
                     Spacer()
                     
@@ -188,7 +219,7 @@ struct HomeView : View {
                     .frame(width: 80, height: 80)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                     .cornerRadius(10)
-                    .offset(x: 20)
+                    .offset(x: 15)
                     
                     Spacer()
                     
@@ -201,10 +232,18 @@ struct HomeView : View {
         .onTapGesture {
             startDomino()
         }
+        .onAppear {
+            Timer.scheduledTimer(
+                withTimeInterval: 1,
+                repeats: true) { _ in
+                    timeCheck()
+                }
+        }
        
         
         
     }
+        
 }
 
 
