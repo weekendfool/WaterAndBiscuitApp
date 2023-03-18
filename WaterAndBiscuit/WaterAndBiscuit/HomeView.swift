@@ -12,18 +12,19 @@ import SwiftUI
 struct HomeView : View {
     
 
-    
+    func startDomino() {
+        
+    }
     
     @State var name = ""
     @State var point = 1000
     @State var team = ""
-
+    @State var date = Date()
     var body: some View {
         
         
         ZStack() {
             Color.black.ignoresSafeArea()
-            
             
             
             VStack() {
@@ -32,7 +33,7 @@ struct HomeView : View {
                     print("userName")
                 } label: {
                     VStack(spacing: 0) {
-                        Text("所属チーム: \(name)")
+                        Text("\(date)")
                             .font(.system(size: 25))
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -51,162 +52,161 @@ struct HomeView : View {
                     }
                         
                 }
-                .frame(width: 350, height: 180)
+                .frame(width: 320, height: 150)
                 .padding()
                 .bold()
                 .background(.white)
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                 .cornerRadius(10)
-                .offset(y: 80)
+                .frame(alignment: .center)
+                .offset(y: -50)
                 
               
 
                 HStack {
                     
-                    Button {
-                        print("ok")
-                    } label: {
-                        VStack(spacing: 0) {
-                            Text("ブースト")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
-                            
-                            Text("強化")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 60, height: 60)
-                            
-                    }
-                    .bold()
-                    .padding()
-                    .background(.white)
-                    .frame(width: 70, height: 70)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
-                    .cornerRadius(10)
+                    Spacer()
                     
                     Button {
                         print("ok")
                     } label: {
-                        VStack(spacing: 0) {
-                            Text("シュート")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
+                        Text("スキル")
+                            .font(.system(size: 15))
+                            .foregroundColor(.black)
+                            .frame(width: 80, height: 80)
+                
                             
-                            Text("射撃")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 60, height: 60)
                     }
                     .bold()
                     .padding()
                     .background(.white)
-                    .frame(width: 70, height: 70)
+                    .frame(width: 80, height: 80)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                     .cornerRadius(10)
+                    .offset(x: -20)
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("ok")
+                    } label: {
+                        Text("メモ")
+                            .font(.system(size: 15))
+                            .foregroundColor(.black)
+                            .frame(width: 80, height: 80)
+                            
+                    }
+                    .bold()
+                    .padding()
+                    .background(.white)
+                    .frame(width: 80, height: 80)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
+                    .cornerRadius(10)
+                    
+                    Spacer()
 
                     Button {
                         print("ok")
                     } label: {
-                        VStack(spacing: 0) {
-                            Text("サーチ")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
+                        Text("カメラ")
+                            .font(.system(size: 15))
+                            .foregroundColor(.black)
+                            .frame(width: 80, height: 80)
+                
                             
-                            Text("検索")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 60, height: 60)
                     }
                     .bold()
                     .padding()
                     .background(.white)
-                    .frame(width: 70, height: 70)
+                    .frame(width: 80, height: 80)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                     .cornerRadius(10)
+                    .offset(x: 20)
                     
-                    Button {
-                        print("ok")
-                    } label: {
-                        VStack(spacing: 0) {
-                            Text("サポート")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
-                            
-                            Text("補助")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 60, height: 60)
-                    }
-                    .bold()
-                    .padding()
-                    .background(.white)
-                    .frame(width: 70, height: 70)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
-                    .cornerRadius(10)
-                    
-                    Button {
-                        print("ok")
-                    } label: {
-                        
-                        VStack(spacing: 0) {
-                            Text("アイテム")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
-                            
-                            Text("道具")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 60, height: 60)
-                        
-                    }
-                    .bold()
-                    .padding()
-                    .background(.white)
-                    .frame(width: 70, height: 70)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
-                    .cornerRadius(10)
+                    Spacer()
                     
                 }
-                .offset(y: 350)
+                .frame(alignment: .center)
+                .offset(y: -30)
                 
                 HStack {
+                    
+                    Spacer()
+                    
                     Button {
                         print("ok")
                     } label: {
-                        VStack(spacing: 0) {
-                            Text("オリジナル")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
-                            
-                            Text("その他")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 60, height: 60)
+                        Text("データフォルダ")
+                            .font(.system(size: 15))
+                            .foregroundColor(.black)
+                            .frame(width: 80, height: 80)
+                
                             
                     }
                     .bold()
                     .padding()
                     .background(.white)
-                    .frame(width: 70, height: 70)
+                    .frame(width: 80, height: 80)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
                     .cornerRadius(10)
-                }
-                .offset(y: 350)
+                    .offset(x: -20)
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("ok")
+                    } label: {
+                        Text("システム")
+                            .font(.system(size: 15))
+                            .foregroundColor(.black)
+                            .frame(width: 80, height: 80)
                 
-                Spacer()
+                            
+                    }
+                    .bold()
+                    .padding()
+                    .background(.white)
+                    .frame(width: 80, height: 80)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
+                    .cornerRadius(10)
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("ok")
+                    } label: {
+                        Text("チーム")
+                            .font(.system(size: 15))
+                            .foregroundColor(.black)
+                            .frame(width: 80, height: 80)
+                
+                            
+                    }
+                    .bold()
+                    .padding()
+                    .background(.white)
+                    .frame(width: 80, height: 80)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
+                    .cornerRadius(10)
+                    .offset(x: 20)
+                    
+                    Spacer()
+                    
+                }
+                .frame(alignment: .center)
+                .offset(y: -15)
+          
             }
+        }
+        .onTapGesture {
+            startDomino()
         }
        
         
         
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
