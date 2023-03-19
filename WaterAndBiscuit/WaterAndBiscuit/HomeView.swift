@@ -26,15 +26,7 @@ struct HomeView : View {
     let settingDate = 29
     let date = Int.random(in: 1...31)
     
-//    func timer() {
-//        let timer = Timer(
-//            timeInterval: 1,
-//            target: self,
-//            selector: #selector(timeCheck),
-//            userInfo: nil,
-//            repeats: true)
-//    }
-//
+
     func timeCheck() {
         let dt = Date()
         var dateFormatter = DateFormatter()
@@ -64,13 +56,13 @@ struct HomeView : View {
                     print("userName")
                 } label: {
                     VStack(spacing: 0) {
-                        Text("\(time)")
+                        Text("\(month)/\(date)  \(time)")
                             .font(.system(size: 25))
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.bottom)
                         
-                        Text("userName: \(name)")
+                        Text("Name: \(name)")
                             .font(.system(size: 25))
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)

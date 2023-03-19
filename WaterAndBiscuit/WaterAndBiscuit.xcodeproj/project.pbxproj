@@ -16,6 +16,8 @@
 		8CBD6E7D29C4B26100723214 /* WaterAndBiscuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E7C29C4B26100723214 /* WaterAndBiscuitUITests.swift */; };
 		8CBD6E7F29C4B26100723214 /* WaterAndBiscuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E7E29C4B26100723214 /* WaterAndBiscuitUITestsLaunchTests.swift */; };
 		8CBD6E8C29C5053E00723214 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E8B29C5053E00723214 /* HomeView.swift */; };
+		8CBD6E8E29C644DB00723214 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E8D29C644DB00723214 /* FirstView.swift */; };
+		8CBD6E9029C74ECB00723214 /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E8F29C74ECB00723214 /* SkillView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		8CBD6E7C29C4B26100723214 /* WaterAndBiscuitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAndBiscuitUITests.swift; sourceTree = "<group>"; };
 		8CBD6E7E29C4B26100723214 /* WaterAndBiscuitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAndBiscuitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8CBD6E8B29C5053E00723214 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8CBD6E8D29C644DB00723214 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		8CBD6E8F29C74ECB00723214 /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 			children = (
 				8CBD6E5F29C4B25E00723214 /* AppDelegate.swift */,
 				8CBD6E6129C4B25E00723214 /* ContentView.swift */,
+				8CBD6E8D29C644DB00723214 /* FirstView.swift */,
 				8CBD6E8B29C5053E00723214 /* HomeView.swift */,
+				8CBD6E8F29C74ECB00723214 /* SkillView.swift */,
 				8CBD6E6329C4B25E00723214 /* Experience.rcproject */,
 				8CBD6E6529C4B26100723214 /* Assets.xcassets */,
 				8CBD6E6729C4B26100723214 /* Preview Content */,
@@ -263,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CBD6E9029C74ECB00723214 /* SkillView.swift in Sources */,
 				8CBD6E6229C4B25E00723214 /* ContentView.swift in Sources */,
+				8CBD6E8E29C644DB00723214 /* FirstView.swift in Sources */,
 				8CBD6E8C29C5053E00723214 /* HomeView.swift in Sources */,
 				8CBD6E6029C4B25E00723214 /* AppDelegate.swift in Sources */,
 				8CBD6E6429C4B25E00723214 /* Experience.rcproject in Sources */,
