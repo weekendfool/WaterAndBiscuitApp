@@ -34,9 +34,10 @@ struct FirstView: View {
                     .offset(y: -80)
                    
                 Button {
-                    print("userName")
-                    if name.isEmpty {
+                    if name.isEmpty && name != "ウォーター" {
                         isFinished = true
+                    } else if !name.isEmpty || name == "ウォーター" {
+                        isError = true
                     }
                 } label: {
                         Text("決定")
@@ -53,13 +54,6 @@ struct FirstView: View {
                 
         
             }
-            
-            
-            
-            if isFinished {
-               
-            }
-            
             
         }
         .alert(isPresented: $isError) {
