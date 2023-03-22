@@ -10,13 +10,28 @@ import SwiftUI
 
 
 
-struct HomeView : View {
+struct HomeView: View {
     
+
 
     func startDomino() {
         
+        let dominoOneText = [
+            "",
+            ""
+        ]
+        let dominoTwo = [""]
+        let dominoThree = [""]
+        
+        let domions = Int.random(in: 0...2)
+        
+        for text in dominoOneText {
+            dominoText = text
+        }
+        
     }
     
+    @State var dominoText = ""
     @State var name = ""
     @State var point = 1000
     @State var team = ""
@@ -84,7 +99,7 @@ struct HomeView : View {
                 .frame(alignment: .center)
                 .offset(y: -50)
                 
-              
+               
 
                 HStack {
                     
@@ -220,8 +235,28 @@ struct HomeView : View {
                 .offset(y: -15)
           
             }
+            
+            // ドミノの指先用view
+            
+            ZStack {
+                
+                
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(width: 320, height: 160)
+                    .opacity(0.9)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
+                    .cornerRadius(10)
+                    .frame(alignment: .center)
+                
+                Text("ドミノの指先")
+                    .font(.system(size: 25))
+                    .foregroundColor(.black)
+                    
+            }
         }
         .onTapGesture {
+            
             startDomino()
         }
         .onAppear {
@@ -231,11 +266,20 @@ struct HomeView : View {
                     timeCheck()
                 }
         }
+        
+      
+        
        
         
         
     }
         
+}
+
+struct DominoView: View {
+    var body: some View {
+        
+    }
 }
 
 
