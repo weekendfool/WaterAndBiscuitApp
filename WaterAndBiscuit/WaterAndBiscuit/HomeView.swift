@@ -239,19 +239,9 @@ struct HomeView: View {
             // ドミノの指先用view
             
             ZStack {
+                DominoView()
                 
-                
-                Rectangle()
-                    .fill(Color.white)
-                    .frame(width: 320, height: 160)
-                    .opacity(0.9)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
-                    .cornerRadius(10)
-                    .frame(alignment: .center)
-                
-                Text("ドミノの指先")
-                    .font(.system(size: 25))
-                    .foregroundColor(.black)
+               
                     
             }
         }
@@ -278,7 +268,17 @@ struct HomeView: View {
 
 struct DominoView: View {
     var body: some View {
+        Rectangle()
+            .fill(Color.white)
+            .frame(width: 320, height: 160)
+            .opacity(0.9)
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
+            .cornerRadius(10)
+            .frame(alignment: .center)
         
+        Text("ドミノの指先")
+            .font(.system(size: 25))
+            .foregroundColor(.black)
     }
 }
 
