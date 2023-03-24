@@ -29,6 +29,9 @@ struct HomeView: View {
             dominoText = text
         }
         
+//        isDominoAnimetionFlag = false
+        print("ok")
+        
     }
     
     @State var dominoText = ""
@@ -36,10 +39,12 @@ struct HomeView: View {
     @State var point = 1000
     @State var team = ""
     @State var time = ""
+    @State var isDominoAnimetionFlag = false
     
     let month = 8
     let settingDate = 29
     let date = Int.random(in: 1...31)
+    
     
 
     func timeCheck() {
@@ -63,8 +68,10 @@ struct HomeView: View {
         
         ZStack() {
             Color.black.ignoresSafeArea()
-            
-            
+                .onTapGesture {
+                    print("$$$$$$$$$$")
+                }
+               
             VStack() {
                 
                 Button {
@@ -234,21 +241,26 @@ struct HomeView: View {
                 .frame(alignment: .center)
                 .offset(y: -15)
           
+//            }
+                
             }
+            
             
             // ドミノの指先用view
             
             ZStack {
+                
                 DominoView()
+                    .offset(y: isDominoAnimetionFlag ?  0 : -100)
+                    .opacity(isDominoAnimetionFlag ? 1.0: 0.9)
+                    .animation(Animation.linear, value: 2.0)
                 
                
                     
             }
         }
-        .onTapGesture {
-            
-            startDomino()
-        }
+       
+//        }
         .onAppear {
             Timer.scheduledTimer(
                 withTimeInterval: 1,
@@ -263,6 +275,7 @@ struct HomeView: View {
         
         
     }
+    
         
 }
 
