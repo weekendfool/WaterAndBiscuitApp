@@ -69,7 +69,7 @@ struct HomeView: View {
         ZStack() {
             Color.black.ignoresSafeArea()
                 .onTapGesture {
-                    print("$$$$$$$$$$")
+                    isDominoAnimetionFlag = true
                 }
                
             VStack() {
@@ -251,16 +251,15 @@ struct HomeView: View {
             ZStack {
                 
                 DominoView()
-                    .offset(y: isDominoAnimetionFlag ?  0 : -100)
-                    .opacity(isDominoAnimetionFlag ? 1.0: 0.9)
-                    .animation(Animation.linear, value: 2.0)
+                    .offset(y: isDominoAnimetionFlag ?  -100 : 0)
+                    .opacity(isDominoAnimetionFlag ? 0.9: 0)
+                    .animation(Animation.linear, value: 5.0)
                 
                
                     
             }
         }
-       
-//        }
+        
         .onAppear {
             Timer.scheduledTimer(
                 withTimeInterval: 1,

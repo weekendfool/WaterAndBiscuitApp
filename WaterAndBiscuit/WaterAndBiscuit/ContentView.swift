@@ -175,30 +175,7 @@ struct ContentView : View {
                 }
                 .offset(y: 350)
                 
-                HStack {
-                    Button {
-                        print("ok")
-                    } label: {
-                        VStack(spacing: 0) {
-                            Text("オリジナル")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
-                            
-                            Text("その他")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 60, height: 60)
-                            
-                    }
-                    .bold()
-                    .padding()
-                    .background(.white)
-                    .frame(width: 70, height: 70)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5))
-                    .cornerRadius(10)
-                }
-                .offset(y: 350)
+              
                 
                 Spacer()
             }
