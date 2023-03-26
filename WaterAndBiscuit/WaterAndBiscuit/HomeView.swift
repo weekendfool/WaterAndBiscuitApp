@@ -253,7 +253,7 @@ struct HomeView: View {
                 DominoView()
                     .offset(y: isDominoAnimetionFlag ?  -100 : 0)
                     .opacity(isDominoAnimetionFlag ? 0.9: 0)
-                    .animation(Animation.linear, value: 5.0)
+                    .animation(Animation.easeIn, value: 25.0)
                 
                
                     
