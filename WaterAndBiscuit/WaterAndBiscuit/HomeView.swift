@@ -251,9 +251,11 @@ struct HomeView: View {
             ZStack {
                 
                 DominoView()
-                    .offset(y: isDominoAnimetionFlag ?  -100 : 0)
-                    .opacity(isDominoAnimetionFlag ? 0.9: 0)
-                    .animation(Animation.easeIn, value: 25.0)
+                    .offset(y: isDominoAnimetionFlag ?  -300 : 0)
+                    .opacity(isDominoAnimetionFlag ? 0.9: 0.0)
+                    .animation(Animation.linear(duration: 2.5))
+//                    .hidden()
+                    
                 
                
                     
