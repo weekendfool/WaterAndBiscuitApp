@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8CBD6E6029C4B25E00723214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E5F29C4B25E00723214 /* AppDelegate.swift */; };
-		8CBD6E6229C4B25E00723214 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E6129C4B25E00723214 /* ContentView.swift */; };
 		8CBD6E6429C4B25E00723214 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6E6329C4B25E00723214 /* Experience.rcproject */; };
 		8CBD6E6629C4B26100723214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6E6529C4B26100723214 /* Assets.xcassets */; };
 		8CBD6E6929C4B26100723214 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6E6829C4B26100723214 /* Preview Assets.xcassets */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		8CBD6E5C29C4B25E00723214 /* WaterAndBiscuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterAndBiscuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBD6E5F29C4B25E00723214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CBD6E6129C4B25E00723214 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CBD6E6329C4B25E00723214 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8CBD6E6529C4B26100723214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CBD6E6829C4B26100723214 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				8CBD6E5F29C4B25E00723214 /* AppDelegate.swift */,
-				8CBD6E6129C4B25E00723214 /* ContentView.swift */,
 				8CBD6E8D29C644DB00723214 /* FirstView.swift */,
 				8CBD6E8B29C5053E00723214 /* HomeView.swift */,
 				8CBD6E8F29C74ECB00723214 /* SkillView.swift */,
@@ -270,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CBD6E9029C74ECB00723214 /* SkillView.swift in Sources */,
-				8CBD6E6229C4B25E00723214 /* ContentView.swift in Sources */,
 				8CBD6E8E29C644DB00723214 /* FirstView.swift in Sources */,
 				8CBD6E8C29C5053E00723214 /* HomeView.swift in Sources */,
 				8CBD6E6029C4B25E00723214 /* AppDelegate.swift in Sources */,
