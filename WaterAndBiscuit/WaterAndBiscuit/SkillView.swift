@@ -12,6 +12,7 @@ struct SkillView: View {
         ZStack {
             Color.black.ignoresSafeArea()
             
+            Text("スキル")
             
         }
         
