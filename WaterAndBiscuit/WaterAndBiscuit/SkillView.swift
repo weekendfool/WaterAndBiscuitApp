@@ -13,6 +13,7 @@ struct SkillView: View {
             Color.black.ignoresSafeArea()
             
             Text("スキル")
+                .foregroundColor(.white)
             
         }
         
